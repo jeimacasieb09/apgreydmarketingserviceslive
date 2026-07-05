@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght=400;500;600;700&display=swap');
 
-
+/* --- Reset & Global Styles --- */
 * {
     margin: 0;
     padding: 0;
@@ -51,11 +51,11 @@ body {
 }
 
 .logo-text {
-    font-size: 20px;            
-    font-weight: 700;            
-    color: #1e293b;              
+    font-size: 20px;            /* Size of the title text */
+    font-weight: 700;            /* Makes it bold */
+    color: #1e293b;              /* Clean dark slate color */
     font-family: 'Sofia Pro', 'Poppins', sans-serif;
-    white-space: nowrap;        
+    white-space: nowrap;         /* Prevents the text from wrapping to a second line */
 }
 
 .nav-links {
@@ -78,19 +78,19 @@ body {
 
 /* --- Sections Layout --- */
 section {
-    padding: 100px 0px 80px 0px; 
+    padding: 100px 0px 80px 0px; /* Increased top padding slightly to clear fixed navbar comfortably */
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
+/* Background Toggles for Section Separation */
 #home { 
     background-color: #f0fdf4; 
     text-align: center; 
-    padding-top: 65px; 
-    padding-bottom: 0; 
+    padding-top: 65px; /* Matches the height of your navbar */
+    padding-bottom: 0;  /* Removes space at the bottom if you want it flush there too */
 }
 #about { background-color: #f0f9ff; }
 #services { background-color: #fef2f2; }
@@ -605,16 +605,16 @@ button:hover {
     display: block;        /* Ensures no image bleed outside the wrapper */
 }
 
-/* --- FIXED: Changed background-color to transparent --- */
 .top-circle {
+    position: absolute; /* Assuming this is already there */
     top: 0;
     right: 250px; 
     z-index: 1;
     background-color: transparent;
 }
 
-/* --- FIXED: Changed background-color to transparent --- */
 .bottom-circle {
+    position: absolute; /* Assuming this is already there */
     bottom: 0;
     right: 0;
     z-index: 2;  
@@ -699,7 +699,7 @@ button:hover {
     }
 
     .top-circle {
-        top: 0;
+        top: -50px;
         left: 0;
     }
     
@@ -757,6 +757,7 @@ button:hover {
         grid-template-columns: 1fr; /* Stack text above images on smaller screens */
         padding: 50px 15px 60px 15px; 
     }
+
 
     #home {
         padding-top: 140px; 
@@ -817,10 +818,5 @@ button:hover {
     .innovation-title {
         font-size: 1.8rem;
     }
-    .services-images {
-        height: 280px; /* Scales the circle overlapping nicely for compact screens */
-    }
-    .image-wrapper {
-        max-width: 180px;
-    }
+ 
 }
